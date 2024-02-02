@@ -1,0 +1,122 @@
+{
+  "settings": {
+    "name": "Site 2024-02-02 16:59",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2.5,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.2,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.0",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/untitled.png",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://rugcheck-solana.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "mbrsiteDomain": "1zkmjqbpgm",
+    "imageResize": false,
+    "usedWebp": false,
+    "robotsSwitcher": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 1,
+    "versionPublish": "5.9.0"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "RugCheck | RugCheck Solana | Home",
+        "meta_descr": "RugCheck Solana token checker. Ce: Expected the value to satisfy a union of `type | type`, but received: undefined",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "2.25rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article08",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article8\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpgg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <div class=\"image-wrapper d-flex justify-content-center mb-4\">\n            <img mbr-if=\"showImage\" src=\"@PROJECT_PATH@/assets/images/r.png\" alt=\"rugcheck\">\n          </div>\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>RugCheck Solana: Protecting Investors in the Decentralized Landscape</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Understanding RugCheck Solana:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://rugcheck-solana.github.io/\" class=\"text-primary\">RugCheck Solana</a> is a platform designed to protect investors from fraudulent projects and rug pulls within the Solana blockchain ecosystem. Built on the principles of transparency and community-driven efforts, RugCheck Solana provides investors with the tools and resources necessary to conduct thorough due diligence on projects, identify potential risks, and make informed investment decisions.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>The Need for RugCheck Solana:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">a. Rising Incidents of Rug Pulls: Rug pulls, where developers abandon projects and abscond with investors' funds, have become alarmingly frequent in the DeFi space. These malicious acts undermine trust in the ecosystem and pose risks to unsuspecting investors.\n<br>\n<br>b. Lack of Due Diligence: The decentralized nature of blockchain platforms can lead to a lack of regulatory oversight and standardized due diligence procedures. This gap leaves investors vulnerable to scams and fraudulent projects.\n<br>\n<br>c. Importance of Investor Protection: Investor protection is crucial for the long-term sustainability and growth of the decentralized finance space. By mitigating risks, promoting transparency, and holding projects accountable, RugCheck Solana contributes to a healthier and more trustworthy ecosystem.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Key Features of RugCheck Solana:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><p>a. Project Verification: <a href=\"https://rugcheck.xyz/\" class=\"text-primary\">RugCheck Solana</a> conducts comprehensive audits and due diligence on projects before listing them on the platform. This verification process assesses various factors, including team credentials, project viability, tokenomics, and smart contract security, to ensure that projects meet certain standards of legitimacy and transparency.<br><br>b. Community Reporting: RugCheck Solana empowers the community to report suspicious projects, enabling a collaborative approach to identifying potential scams or rug pulls. By leveraging the collective knowledge and vigilance of the community, RugCheck Solana can swiftly identify and flag risky projects.<br>\n<br>\nc. Risk Assessment Tools: RugCheck Solana provides users with risk assessment tools and scoring mechanisms to evaluate the trustworthiness and potential risks associated with projects. These tools help investors make informed decisions based on objective criteria and data-driven analysis.\n<br>\n<br>d. Smart Contract Audits: RugCheck Solana conducts thorough smart contract audits to identify vulnerabilities and potential security risks. By scrutinizing the code underlying projects, RugCheck Solana helps investors assess the robustness and reliability of the smart contracts.\n<br>\n<br>e. Educational Resources: RugCheck Solana offers educational resources, including articles, guides, and tutorials, to educate investors on best practices for conducting due diligence and recognizing red flags. These resources empower investors to navigate the decentralized landscape with confidence and knowledge.</p></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Benefits and Impact of RugCheck Solana:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">a. Investor Protection: RugCheck Solana plays a crucial role in protecting investors from fraudulent projects and rug pulls. By conducting audits, facilitating community reporting, and providing risk assessment tools, the platform acts as a safeguard, promoting transparency and accountability within the Solana ecosystem.<br><br>b. Mitigating Risks: Through its due diligence processes and smart contract audits, RugCheck Solana helps investors identify and mitigate potential risks associated with projects. This proactive approach minimizes the likelihood of falling victim to scams and rug pulls, enhancing investor confidence and trust.<br><br>\nc. Fostering Trust and Confidence: RugCheck Solana contributes to building a trustworthy and reliable decentralized finance ecosystem. By promoting transparency, accountability, and community-driven efforts, the platform fosters an environment where investors can confidently engage with projects and support the growth of the Solana blockchain ecosystem.\n<br>\n<br>\nd. Weed Out Fraudulent Projects: RugCheck Solana's community reporting feature allows users to flag suspicious projects, helping to identify and expose fraudulent actors. This collective effort weeds out bad actors and reduces the prevalence of scams within the decentralized finance space.\n<br>\n<br>e. Educating Investors: RugCheck Solana's educational resources empower investors with knowledge and tools to conduct due diligence effectively. By equipping investors with the necessary information, RugCheck Solana enhances their ability to make informed investment decisions and navigate the decentralized landscape with confidence.&nbsp;<br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Future Outlook and Potential Impact:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">a. Ecosystem Maturity: As RugCheck Solana continues to gain traction and attract more users, it has the potential to mature into a robust and comprehensive platform for investor protection. With the growing demand for transparency and trust within the decentralized finance space, RugCheck Solana's impact is likely to expand.<br><br>b. Industry Standards: RugCheck Solana can contribute to the establishment of industry standards and best practices for due diligence and project verification. Bypromoting transparency and accountability, the platform sets a precedent for other projects and platforms to follow, ultimately raising the bar for investor protection across the entire DeFi industry.\n<br>\n<br>&nbsp;c. Long-Term Sustainability: RugCheck Solana's efforts to mitigate risks and protect investors contribute to the long-term sustainability of the decentralized finance space. By reducing the prevalence of scams and fraudulent projects, RugCheck Solana helps maintain investor confidence, attract new participants, and foster continued growth and innovation.\n<br>\n<br>d. Collaboration and Partnerships: RugCheck Solana can collaborate with other platforms, projects, and industry stakeholders to further enhance investor protection and promote a safer decentralized finance ecosystem. Partnerships with auditing firms, regulatory bodies, and community-driven initiatives can strengthen the platform's impact and reach.<br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Conclusion:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">RugCheck Solana is a pioneering platform that addresses a crucial need for investor protection within the decentralized finance space. By conducting audits, facilitating community reporting, and providing risk assessment tools, RugCheck Solana empowers investors to make informed decisions and navigate the Solana blockchain ecosystem with confidence.\n<br>\n<br>As the decentralized finance landscape continues to evolve, RugCheck Solana's impact is poised to grow. By fostering transparency, accountability, and community-driven efforts, the platform contributes to a more trustworthy and sustainable ecosystem.\n<br>\n<br>Moving forward, RugCheck Solana has the potential to set industry standards, collaborate with key stakeholders, and further enhance investor protection. By ensuring the longevity and integrity of decentralized finance, RugCheck Solana plays a vital role in building trust and confidence among investors, ultimately driving the continued growth and adoption of the Solana blockchain ecosystem.\n<br>\n<br></p>\n              </div>\n            </div>\n\n            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n              <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "u37YTL2JEc",
+          "_anchor": "article08-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
